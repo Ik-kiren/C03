@@ -1,26 +1,27 @@
-#include<stdio.h>
-#include<string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/23 13:53:07 by cdupuis           #+#    #+#             */
+/*   Updated: 2022/07/23 13:53:34 by cdupuis          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
-	
+	unsigned int	i;
+
 	i = 0;
 	if (s1[0] == '\0' && s2[0] == '\0')
 	{
 		return (0);
 	}
-	while (i < n  && (s1[i] && s2[i]))
+	while (i < n && (s1[i] && s2[i]))
 	{
 		i++;
 	}
 	return (s1[i] - s2[i]);
-}
-
-int main()
-{	
-	char tab[] = "tefg";
-	char arr[] = "test";
-	printf("%d\n", ft_strncmp(tab, arr, 0));
-	printf("%d", strncmp(tab, arr, 0));
 }

@@ -1,10 +1,19 @@
-#include<string.h>
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/23 13:54:51 by cdupuis           #+#    #+#             */
+/*   Updated: 2022/07/23 13:55:00 by cdupuis          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strncat(char *dest, char *src, int n)
+char	*ft_strncat(char *dest, char *src, int n)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -20,13 +29,4 @@ char *ft_strncat(char *dest, char *src, int n)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int main()
-{
-char tab[] = "test";
-char arr[] = "grappe";
-
-ft_strncat(tab, arr, 3);
-printf("%s", tab);
 }

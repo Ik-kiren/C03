@@ -1,22 +1,27 @@
-#include<stdio.h>
-#include<string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cdupuis <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/23 13:51:29 by cdupuis           #+#    #+#             */
+/*   Updated: 2022/07/23 13:52:18 by cdupuis          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
-	while (s1[i] && s2[i])
+	if (s1[0] == s2[0])
+	{
+		return (0);
+	}
+	while (s1[i] == s2[i])
 	{
 		i++;
 	}
 	return (s1[i] - s2[i]);
-}
-
-int main()
-{	
-	char tab[] = "";
-	char arr[] = "";
-	printf("%d", ft_strcmp(tab, arr));
-	printf("%d", strcmp(tab, arr));
 }
