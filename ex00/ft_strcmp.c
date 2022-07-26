@@ -10,18 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+#include<stdio.h>
+#include<string.h>
 
-	i = 0;
-	if (s1[0] == s2[0])
+int		ft_strcmp(char *s1, char *s2)
+{
+	while (*s1 == *s2 && *s1)
 	{
-		return (0);
+		s1++;
+		s2++;
 	}
-	while (s1[i] == s2[i])
-	{
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	return (*s1 - *s2);
+}
+
+
+int main()
+{
+	char tab[] = "\200";
+	char arr[] = "\1";
+
+	printf("%d\n", ft_strcmp(tab, arr));
+	printf("%d\n", strcmp(tab, arr));
 }
